@@ -208,7 +208,7 @@ describe('#addCustomResourceToService()', () => {
     const role = 'arn:aws:iam::999999999999:role/my-role';
     const { cfTemplate } = await runServerless({
       fixture: 'function',
-      cliArgs: ['package'],
+      command: 'package',
       configExt: {
         provider: {
           cfnRole: role,
